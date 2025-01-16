@@ -49,17 +49,18 @@ public class Negozio {
         //calcola il totale delle vendite per cliente
         //voglio una mappa CLIENTE/TOTALE VENDITE. I prezzi sono in double
         Map<Customer, Double> totalSalesPerCustomer = orders.stream()
-                .collect(Collectors.groupingBy(
-                        Order::getCustomer)).collect(Collector.summingDouble()
-//AIUTOOOOOOOOOOOOOOOOOO
-                );
+                .collect(Collectors.groupingBy(Order::getCustomer,Collectors.summingDouble(Order::getTotal)));
 
         //Esercizio #3
-        //Dato un elenco di prodotti, trova i prodotti più costosi utilizzando Stream e Lambda Expressions
+        //Dato un elenco di prodotti, trova i prodotti più costosi utilizzando Stream e Lambda Expressions*/
 
-        List<Integer> maxPrice = products.stream()
-                .sorted(Comparator.comparingDouble(Product::getPrice))
-                .max(Product::getPrice());
+        /*List<Double> listaPrezzoProdotti = products.stream()
+                                                    .filter(product -> product.getPrice() > 100)
+                .sorted()
+                .collect(Collectors.toList());*/
+        
+
+
 
 
 

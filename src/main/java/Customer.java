@@ -37,7 +37,7 @@ public class Customer {
     //metodo toString
 
     public String toString(){
-        String dettagliCliente = "id cliente: " + id + ", nome: " + name + ", livello: " + tier;
+        String dettagliCliente = "Id cliente: " + id + "\nNome: " + name + "\nLivello: " + tier;
         return dettagliCliente;
     }
 }

@@ -36,6 +36,11 @@ public class Order {
     //to string
     @Override
     public String toString(){
-        String dettagliOrdine = "id ordine: " + id +"\n" +"Status " + status + "\n" + "Prodotti: " + products + "\n" + "Cliente: " + customer;
+        String dettagliOrdine = "id ordine: " + id +"\nStatus " + status + "\nProdotti: " + products + "\nCliente: " + customer;
         return dettagliOrdine;}
+
+    public double getTotal(){
+        return products.stream().mapToDouble(Product::getPrice).sum();
+    }
 }
+

@@ -45,7 +45,7 @@ public class Product {
     //metodo toString()
     @Override
     public String toString(){
-        String dettagliProdotto =  "id prodotto "+id + ", nome: "+name + ", categoria: " + category + ", prezzo: " + price;
+        String dettagliProdotto =  "id prodotto "+id + "\nNome: "+name + "\nCategoria: " + category + "\nPrezzo: " + price;
         return dettagliProdotto;
     }
 
