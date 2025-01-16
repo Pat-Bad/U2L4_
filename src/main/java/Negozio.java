@@ -54,7 +54,12 @@ public class Negozio {
 //AIUTOOOOOOOOOOOOOOOOOO
                 );
 
-        System.out.println(totalSalesPerCustomer);
+        //Esercizio #3
+        //Dato un elenco di prodotti, trova i prodotti più costosi utilizzando Stream e Lambda Expressions
+
+        List<Integer> maxPrice = products.stream()
+                .sorted(Comparator.comparingDouble(Product::getPrice))
+                .max(Product::getPrice());
 
 
 
